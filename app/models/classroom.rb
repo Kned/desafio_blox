@@ -1,4 +1,5 @@
 class Classroom < ApplicationRecord
-  has_many :meetings
-  validates :name, presence: true
+  has_many :meetings, dependent: :destroy
+  validates :name, presence: true, uniqueness: true
+
 end

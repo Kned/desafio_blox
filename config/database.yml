@@ -27,7 +27,7 @@ development:
 staging:
   <<: *default
   host: <%= ENV['DATABASE_URL'] %>
-  database: ddbh536lvf7o32
-  username: sautbehwxknury
+  database: <%= ENV['DATABASE'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
   port: 5432
-  password: ec480eaebff5fabc190c720bb0ac58fb3bdb99fa27e25ec91d716a9a1f48a857
+  password: <%= ENV['DATABASE_PASSWORD'] %>

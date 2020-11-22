@@ -62,3 +62,4 @@ en:
   errors:
     messages:
       blank: não pode ficar em branco
+      taken: ja está em uso

@@ -1,19 +1,22 @@
+<div class="card login-card">
+  <div class="card-body">
+    <h4 class="card-title"><%= t('classrooms') %></h4>
+      <ul class="list-group">
+        <% @classrooms.each do |classroom| %>
+      
+            <li class="list-group-item">
+              <h5>
+                <%= classroom.name %> 
+                <div class=float-right>
+                  <%= link_to t('show'), classroom, class: "btn btn-primary" %>
+                  <%= link_to t('delete'), classroom, method: :delete, data: { confirm: t('delete_confirm') }, class: "btn btn-danger" %>
+                </div>
+              </h5>
+            </li>
+      
+        <% end %>
+      </ul>
 
-<h4 class="card-title"><%= t('classrooms') %></h4>
-  <ul class="list-group">
-    <% @classrooms.each do |classroom| %>
-  
-        <li class="list-group-item">
-          <h5>
-            <%= classroom.name %> 
-            <div class=float-right>
-              <%= link_to t('show'), classroom, class: "btn btn-primary" %>
-              <%= link_to t('delete'), classroom, method: :delete, data: { confirm: t('delete_confirm') }, class: "btn btn-danger" %>
-            </div>
-          </h5>
-        </li>
-  
-    <% end %>
-  </ul>
-
-<%= link_to t('submit.create'), new_classroom_path, class: "btn btn-success", role: "Button" %>
+    <%= link_to t('submit.create'), new_classroom_path, class: "btn btn-success", role: "Button" %>
+  </div>
+</div>
