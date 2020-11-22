@@ -1,0 +1,18 @@
+<%= flash_message.html_safe %>
+<h4 class="card-title"><%= @classroom.name %></h4>
+  <%= month_calendar(events: @meetings) do |date, meetings| %>
+    <%= link_to  date.day, new_classroom_meeting_url(date: date, classroom_id: @classroom.id) %>
+
+    <% meetings.each do |meeting| %>
+      <div>
+        <%= link_to  "#{meeting.start_time.in_time_zone("Brasilia").hour}h #{meeting.name}", classroom_meeting_url(id: meeting.id, classroom_id: @classroom.id) %>  
+      </div>
+    <% end %>
+  <% end %>
+
+<form class="form-inline">
+  <div class="container-fluid">
+    <%= link_to t("delete"), @classroom, data: { confirm: t("delete_confirm") }, method: :delete, class: "btn btn-danger " %>
+    <%= link_to t("back"), classrooms_path, class: "btn btn-primary", role: "button" %>
+  </div>
+</form>

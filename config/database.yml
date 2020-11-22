@@ -1,0 +1,27 @@
+---
+test:
+  adapter: postgresql
+  host: localhost
+  encoding: utf8
+  database: desafio_blox_test
+  username: postgres
+  password: 'root'
+  schema_search_path: public, common, extensions
+
+development:
+  adapter: postgresql
+  host: localhost
+  encoding: utf8
+  database: desafio_blox_development
+  username: postgres
+  password: 'root'
+  schema_search_path: public, common, extensions
+
+production:
+  adapter: postgresql
+  host: localhost
+  encoding: utf8
+  database: desafio_blox_development
+  username: postgres
+  password: 'root'
+  schema_search_path: public, common, extensions

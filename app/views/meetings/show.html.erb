@@ -1,0 +1,23 @@
+<h4 class="card-title"><%= t("meeting") %></h4>
+<div class="form-group">
+  <label for="meeting_name"> Nome </label>
+  <input name="meeting_name" value=<%= @meeting.name %> class="form-control" disabled></input>
+</div>
+
+<div class="form-group">
+  <label for="user_name"> Responsável </label>
+  <input name="user_name" value=<%= @meeting.user.email %> class="form-control" disabled></input>
+</div>
+
+<div class="form-group">
+  <label for=start_time> Horário</label>
+  <input name="start_time" value=<%= @meeting.start_time %> class="form-control" disabled></input>
+</div>
+<form class="form-inline">
+  <div class="container-fluid">
+    <% if current_user == @meeting.user %>
+      <%= link_to t("delete"), classroom_meeting_path(id: @meeting, classroom_id: @classroom.id), data: { confirm: t("delete_confirm") }, method: :delete, class: "btn btn-danger " %>
+    <% end %>
+    <%= link_to t("back"), classroom_path([@classroom]), class: "btn btn-primary", role: "button" %>
+  </div>
+</form>
