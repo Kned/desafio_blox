@@ -13,8 +13,8 @@ $rails db:migrate
 $rspec
 $rails s
 # Possiveis melhorias
--Implementação de testes automatizados com cucumber
--Implementação de roles para possibilitar administração do app
+- Implementação de testes automatizados com cucumber
+- Implementação de roles para possibilitar administração do app
 # Heroku
 https://serene-castle-62015.herokuapp.com/
 Basta criar um usuário e testar a aplicação
