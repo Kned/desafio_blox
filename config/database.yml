@@ -1,4 +1,11 @@
 ---
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
 test:
   adapter: postgresql
   host: localhost
@@ -17,11 +24,10 @@ development:
   password: 'root'
   schema_search_path: public, common, extensions
 
-production:
-  adapter: postgresql
-  host: localhost
-  encoding: utf8
-  database: desafio_blox_development
-  username: postgres
-  password: 'root'
-  schema_search_path: public, common, extensions
+staging:
+  <<: *default
+  host: <%= ENV['DATABASE_URL'] %>
+  database: ddbh536lvf7o32
+  username: sautbehwxknury
+  port: 5432
+  password: ec480eaebff5fabc190c720bb0ac58fb3bdb99fa27e25ec91d716a9a1f48a857
