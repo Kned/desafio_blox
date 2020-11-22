@@ -15,12 +15,12 @@ gem 'turbolinks', '~> 5'
 gem 'jquery-rails'
 gem 'rails-i18n'
 gem "devise"
+gem "uglifier"
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem "uglifier"
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem "ffaker", "1.32.1"
