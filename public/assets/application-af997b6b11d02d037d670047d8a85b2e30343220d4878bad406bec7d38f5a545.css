@@ -113,13 +113,6 @@ div.field, div.actions {
 label {
   display: block;
 }
-/* line 4, app/assets/stylesheets/sessions.scss */
-.card {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-  max-width: 400px;
-}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -12614,4 +12607,16 @@ textarea.form-control-lg {
 /* line 31, app/assets/stylesheets/application.scss */
 .navbar-brand:hover {
   background: none;
+}
+
+/* line 34, app/assets/stylesheets/application.scss */
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+/* line 38, app/assets/stylesheets/application.scss */
+.card.login-card {
+  max-width: 400px;
 }
