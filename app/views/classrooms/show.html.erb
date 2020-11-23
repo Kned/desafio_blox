@@ -7,7 +7,7 @@
 
         <% meetings.each do |meeting| %>
           <div>
-            <li><%= link_to  "#{meeting.start_time.in_time_zone("Brasilia").hour}h #{meeting.name}", classroom_meeting_url(id: meeting.id, classroom_id: @classroom.id) %></li>
+            <li><%= link_to  "#{meeting.start_time.hour}h #{meeting.name}", classroom_meeting_url(id: meeting.id, classroom_id: @classroom.id) %></li>
           </div>
         <% end %>
       <% end %>
