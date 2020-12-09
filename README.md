@@ -1,4 +1,4 @@
-# Sobre o teste
+# Sobre este teste
 Este teste é apresentado às pessoas que estão se candidatando às vagas de desenvolvimento para avaliar os quesitos técnicos.  
 O código deve ser escrito utilizando a linguagem Ruby + framework Rails.
 # Solução utilizada
